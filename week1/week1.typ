@@ -52,13 +52,14 @@ There are written to help you understand.
 
 === If you are proving by contradiction
 
-1. You first assume towards a contradiction. Therefore, you assume $A sect B != A$ holds.
-2. Then there must be some element $x in A$ such that $x in.not A sect B$, namely $o$.
-3. As $o in A$, $o in.not A sect B$, this means $o in.not B$
-4. However, as we assumed $A subset.eq B$ in the universal step 0, by definition all elements of 
+1. You first assume towards a contradiction. Therefore, you assume _not_ ($A sect B = A$) holds, which further expands to "not ( $A sect B subset.eq A$ and $A subset.eq A sect B$)"
+2. by de Morgan's Law, we get "not ($A sect B subset.eq A$)" or "not ($A subset.eq A sect B$)". By using cases, the former will be rejected (reason yourself!). Thus by using or, "not ($A subset.eq A sect B$)" holds.
+3. Then there must be some element $x in A$ such that $x in.not A sect B$, namely $o$.
+4. As $o in A$, $o in.not A sect B$, this means $o in.not B$
+5. However, as we assumed $A subset.eq B$ in the universal step 0, by definition all elements of 
 $A$ must also be in $B$. Therefore as $o in A$, $o in B$ holds. 
-5. This contradicts with result in 3.
-6. Remember we assumed $A sect B != A$ on our own in 1. Then we get contradiction. We say now that
+6. This contradicts with result in 3.
+7. Remember we assumed $A sect B != A$ on our own in 1. Then we get contradiction. We say now that
   $A sect B = A$ holds and completed the proof via proof by contradiction.
 
 === A bit verbose, isn't it?
